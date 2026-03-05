@@ -64,6 +64,15 @@ function cpp() {
   openapi generate -i /specs/src.yaml -g cpp-restsdk -t sdk/templates -o sdk/cpp "${version}"
 }
 
+function ruby() {
+  local version=${1:-v1}
+
+  rm -rf "${version}/sdk/ruby"
+  mkdir -p "${version}/sdk/ruby"
+  cp "${version}/sdk/templates/ruby-openapi-generator-ignore" "${version}/sdk/ruby/.openapi-generator-ignore"
+  openapi generate -i /specs/src.yaml -g ruby -o sdk/ruby -c /sdk/ruby.yml "${version}"
+}
+
 function python() {
   local version=${1:-v1}
 

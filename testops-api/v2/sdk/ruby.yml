@@ -1,0 +1,5 @@
+# https://openapi-generator.tech/docs/generators/ruby/
+gemName: qase-api-client-v2
+moduleName: QaseApiClientV2
+hideGenerationTimestamp: true
+disallowAdditionalPropertiesIfNotPresent: false
